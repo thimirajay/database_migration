@@ -5,7 +5,7 @@ use App\Http\Controllers\DatabaseMigrationController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::post('/fetch-columns', [DatabaseMigrationController::class, 'fetchColumns'])->name('fetch.columns');
 Route::post('/fetch-data', [DatabaseMigrationController::class, 'fetchData'])->name('fetch.data');
